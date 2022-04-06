@@ -1,0 +1,565 @@
+<html>
+	<head>
+		<title>CG Lab - "Type your sap id here".</title>
+	</head>
+	<body>
+		<canvas id="canvas"  width="1200" height="600">
+			Your browser does not support HTML5
+		</canvas>
+		<br/>
+		<script>
+		//////////////////////////////// YOUR CODE SHOULD START AFTER THIS LINE //////////////////////
+			var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
+			var verticesData = [];		// The array holds the x,y of all the data points to be drawn on the screen.
+			verticesData = [//DEEPAK
+							//D
+							10,80,
+							10,77.5,
+							10,75,
+							10,72.5,
+							10,70,
+							10,67.5,
+							10,65,
+							10,62.5,
+							10,60,
+
+							11,80,
+							12,80,
+							13,80,
+							14,80, 
+							
+							15,77.5,
+							15,75,
+							15,72.5,
+							15,70,
+							15,67.5,
+							15,65,
+							15,62.5,
+							
+							11,60,
+							12,60,
+							13,60,
+							14,60,  
+
+							//E
+							20,80,
+							20,77.5,
+							20,75,
+							20,72.5,
+							20,70,
+							20,67.5,
+							20,65,
+							20,62.5,
+							20,60,
+
+							21,80,
+							22,80,
+							23,80,
+							24,80,
+							25,80,
+							26,80,
+							
+							21,70,
+							22,70,
+							23,70,
+							24,70,
+							25,70,
+							26,70,
+
+							21,60,
+							22,60,
+							23,60,
+							24,60,
+							25,60,
+							26,60,
+
+							//E
+							31,80,
+							31,77.5,
+							31,75,
+							31,72.5,
+							31,70,
+							31,67.5,
+							31,65,
+							31,62.5,
+							31,60,
+
+							32,80,
+							33,80,
+							34,80,
+							35,80,
+							36,80,
+							37,80,
+
+							32,70,
+							33,70,
+							34,70,
+							35,70,
+							36,70,
+							37,70,
+
+							32,60,
+							33,60,
+							34,60,
+							35,60,
+							36,60,
+							37,60,
+
+							//P
+							42,80,
+							42,77.5,
+							42,75,
+							42,72.5,
+							42,70,
+							42,67.5,
+							42,65,
+							42,62.5,
+							42,60,
+
+							43,80,
+							44,80,
+							45,80,
+							46,80,
+							47,80,
+
+							48,77.5,
+							48,75,
+							48,72.5,
+
+							47,70,
+							46,70,
+							45,70,
+							44,70,
+							43,70,
+
+							//A
+							53,77.5,
+							53,75,
+							53,72.5,
+							53,70,
+							53,67.5,
+							53,65,
+							53,62.5,
+							53,60,
+
+							54,80,
+							55,80,
+							56,80,
+							57,80,
+							58,80,
+
+							59,77.5,
+							59,75,
+							59,72.5,
+							59,70,
+							59,67.5,
+							59,65,
+							59,62.5,
+							59,60,
+
+							54,70,
+							55,70,
+							56,70,
+							57,70,
+							58,70,
+
+							//K
+							64,80,
+							64,77.5,
+							64,75,
+							64,72.5,
+							64,70,
+							64,67.5,
+							64,65,
+							64,62.5,
+							64,60,
+
+							65,71,
+							66,72,
+							67,73,
+							68,74,
+							69,75,
+							70,76,
+							71,77,
+							72,78,
+							73,79,
+
+							65,69,
+							66,68,
+							67,67,
+							68,66,
+							69,65,
+							70,64,
+							71,63,
+							72,62,
+							73,61,
+
+							//VARSHNEY
+							//V
+							10,10,
+							9.5,12,
+							9,14,
+							8.5,16,
+							8,18,
+							7.5,20,
+							7,22,
+							6.5,24,
+							6,26,
+							5.5,28,
+							5,30,
+							
+							10,10,
+							10.5,12,
+							11,14,
+							11.5,16,
+							12,18,
+							12.5,20,
+							13,22,
+							13.5,24,
+							14,26,
+							14.5,28,
+							15,30,
+
+							//A
+							19,10,
+							19,12.5,
+							19,15,
+							19,17.5,
+							19,20,
+							19,22.5,
+							19,25,
+							19,27.5,
+
+							20,30,
+							21,30,
+							22,30,
+							23,30,
+							24,30,
+
+							25,27.5,
+							25,25,
+							25,22.7,
+							25,20,
+							25,17.5,
+							25,15,
+							25,12.5,
+							25,10,
+
+							20,20,
+							21,20,
+							22,20,
+							23,20,
+							24,20,
+
+							//R
+							29,30,
+							29,27.5,
+							29,25,
+							29,22.5,
+							29,20,
+							29,17.5,
+							29,15,
+							29,12.5,
+							29,10,
+
+							30,30,
+							31,30,
+							32,30,
+							33,30,
+							34,30,
+
+							35,27.5,
+							35,25,
+							35,22.5,
+
+							34,20,
+							33,20,
+							32,20,
+							31,20,
+							30,20,
+
+							29,20,
+							30,18,
+							31,16,
+							32,14,
+							33,12,
+							34,10,
+
+							//S
+							40,30,
+							41,30,
+							42,30,
+							43,30,
+							44,30,
+							45,30,
+
+							39,27.5,
+							39,25,
+							39,22.5,
+
+							40,20,
+							41,20,
+							42,20,
+							43,20,
+							44,20,
+
+							45,17.5,
+							45,15,
+							45,12.5,
+
+							44,10,
+							43,10,
+							42,10,
+							41,10,
+							40,10,
+							39,10,
+
+							//H
+							49,30,
+							49,27.5,
+							49,25,
+							49,22.5,
+							49,20,
+							49,17.5,
+							49,15,
+							49,12.5,
+							49,10,
+
+							50,20,
+							51,20,
+							52,20,
+							53,20,
+							54,20,
+
+							55,30,
+							55,27.5,
+							55,25,
+							55,22.5,
+							55,20,
+							55,17.5,
+							55,15,
+							55,12.5,
+							55,10,
+
+							//N
+							59,30,
+							59,27.5,
+							59,25,
+							59,22.5,
+							59,20,
+							59,17.5,
+							59,15,
+							59,12.5,
+							59,10,
+
+							59.9,27.5,
+							61,25,
+							61.9,22.5,
+							63,20,
+							63.9,17.5,
+							65,15,
+							65.9,12.5,
+
+							67,10,
+							67,12.5,
+							67,15,
+							67,17.5,
+							67,20,
+							67,22.5,
+							67,25,
+							67,27.5,
+							67,30,
+
+							//E
+							72,30,
+							72,27.5,
+							72,25,
+							72,22.5,
+							72,20,
+							72,17.5,
+							72,15,
+							72,12.5,
+							72,10,
+
+							73,30,
+							74,30,
+							75,30,
+							76,30,
+							77,30,
+							78,30,
+
+							73,20,
+							74,20,
+							75,20,
+							76,20,
+							77,20,
+							78,20,
+
+							73,10,
+							74,10,
+							75,10,
+							76,10,
+							77,10,
+							78,10,
+
+							//Y
+							82,30,
+							82.9,27.5,
+							84,25,
+							84.9,22.5,
+							86,20,
+	
+							86.9,22.5,
+							88,25,
+							88.9,27.5,
+							90,30,
+
+							86,17.5,
+							86,15,
+							86,12.5,
+							86,10];
+
+			draw(verticesData);			// This method draws all the points provided in the argument array.
+		//////////////////////////////// YOUR CODE SHOULD END BEFORE THIS LINE //////////////////////
+
+			function XY_mapping(){
+				let inputVertices = arguments[0];			
+				var SCREEN_SIZE = arguments[1];
+				for(var i = 0; i < inputVertices.length; i++)
+				{
+					inputVertices[i] = -1 + inputVertices[i]/(SCREEN_SIZE/2);
+					inputVertices[i] = inputVertices[i].toFixed(2);
+				}
+				return inputVertices;
+			}
+
+			//////////////////////////////// WebGL code starts from here. Don't touch uncless you have understanding of it.//////////////////////
+			function draw () {		
+				var verticesData = arguments[0];	
+				verticesDataArrayJS = XY_mapping(verticesData, SCREEN_SIZE);	
+
+				var gl, shaderProgram;
+
+				gl = initializeWebGL(gl);
+
+				//Step 1 (Set background color): First specify the color with the help of Quadlet(R,G,B,Alpha) and the clear the buffer related to background.
+				gl.clearColor(0, 0, 0, 1.0);	
+				gl.clear(gl.COLOR_BUFFER_BIT);
+				//Note: The default background color in WebGl is white.
+
+				//Step 4 (Create GPU meomry buffer): In the GPU for holding vertices data of type ARRAY_BUFFER.
+				var rectVBO = gl.createBuffer();
+				gl.bindBuffer(gl.ARRAY_BUFFER, rectVBO);
+
+				//Step 5 (Pass the vertices data to the buffer created previously).
+				gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verticesDataArrayJS), gl.STATIC_DRAW);
+
+				//Seven Steps Shader side coding in JS to get the shader program.
+				shaderProgram = getShaderProgram(gl);
+
+				//Step 14 (Use the shader program):
+				gl.useProgram(shaderProgram);
+
+				//Step 15 (Get access to GPU's geometry coordinates): Get the pointer to the geometry coordinates defined in vertex shader through the shader program.
+				var coordinatesInfoPoniter = gl.getAttribLocation(shaderProgram, 'geometryCoordinatesGPU');
+				
+				//Step 16 (Enable Vertex Attribute Array): It enables the pointer defined in Step 8 to access the vertex buffered data.
+				gl.enableVertexAttribArray(coordinatesInfoPoniter);
+
+				//Step 17 (Buffer data definition): Define how the data on the GPU buffer is arranged. SO that the pointer defined in Step 8 can access the data from the buffer.
+				gl.vertexAttribPointer(
+					coordinatesInfoPoniter, // Vertices pointer
+					2, 						// Number of elements per attribute
+					gl.FLOAT, 				// Type of elements
+					gl.FALSE,				// Data Normalization
+					2 * Float32Array.BYTES_PER_ELEMENT, // Size of an individual vertex
+					0 						// Offset from the beginning of a single vertex to this attribute
+				);
+				
+				//Step 18 (Draw the geometry): Issue the draw command to generate the geometry as defined by the indices and the type of primitive to create.
+				gl.drawArrays(gl.POINTS, 0, verticesDataArrayJS.length);
+			};
+
+			function initializeWebGL(gl)
+			{
+				var canvas = document.getElementById('canvas');
+
+				canvas.width = window.innerWidth;;
+				canvas.height = window.innerHeight;;
+
+				gl = canvas.getContext('webgl');
+
+				if (!gl) {
+					console.log('WebGL not supported, falling back on experimental-webgl');
+					gl = canvas.getContext('experimental-webgl');
+				}
+
+				if (!gl) {
+					alert('Your browser does not support WebGL');
+					return;
+				}
+				return gl;
+			}
+
+			//Seven steps of Shader side coding
+			function getShaderProgram(gl)
+			{
+				//Step 7 (Define vertex shader text): Define the code of the vertex shader in the form of JS text.
+				var vertexShaderText = 
+				' attribute vec2 geometryCoordinatesGPU; ' +
+				' void main() ' +
+				' { ' +
+				'		gl_Position = vec4(geometryCoordinatesGPU, 1.0, 1.0); ' +
+				'		gl_PointSize = 10.0;	'+
+				' } ';
+
+				//Step 8 (Create actual vertex shader): Create the actual vertex shader with the text defined in Step 1.
+				var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+				gl.shaderSource(vertexShader, vertexShaderText);
+
+				//Step 9 (Compile vertex shader):
+				gl.compileShader(vertexShader);
+				if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+					console.error('ERROR compiling vertex shader!', gl.getShaderInfoLog(vertexShader));
+					return;
+				}
+
+				//Step 10: Repeat the above 3 steps for fragment shader.
+				var fragmentShaderText =
+				' void main() ' +
+				' { ' +
+				'  		gl_FragColor = vec4(1, 1, 1, 1); ' +	
+				' } ';
+
+				var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+				gl.shaderSource(fragmentShader, fragmentShaderText);
+
+				gl.compileShader(fragmentShader);
+				if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+					console.error('ERROR compiling fragment shader!', gl.getShaderInfoLog(fragmentShader));
+					return;
+				}
+
+				//Step 11 (Shader program): With the compiled vertex and fragment shader, create the shader program.
+				var shaderProgram = gl.createProgram();
+				gl.attachShader(shaderProgram, vertexShader);
+				gl.attachShader(shaderProgram, fragmentShader);
+
+				//Step 12 (Link shader program): 
+				gl.linkProgram(shaderProgram);
+				if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+					console.error('ERROR linking program!', gl.getProgramInfoLog(shaderProgram));
+					return;
+				}
+
+				//Step 13 (Validate Shader program): Checks if the shader program has been succesfully linked and can be used further.
+				gl.validateProgram(shaderProgram);
+				if (!gl.getProgramParameter(shaderProgram, gl.VALIDATE_STATUS)) {
+					console.error('ERROR validating program!', gl.getProgramInfoLog(shaderProgram));
+					return;
+				}
+				return shaderProgram;
+			}
+		</script>
+	</body>
+</html>

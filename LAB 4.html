@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <canvas id="canvas" width="1200" height="1200">
+    <canvas id="canvas" width="600" height="600">
         Your browser does not support HTML5
     </canvas>
     <br />
@@ -14,25 +14,22 @@
         var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
         var verticesData = [];		// The array holds the x,y of all the data points to be drawn on the screen.
         var x_center = 50, y_center = 50;
-        var r = 8;
+        var r = 8;   // R2142201878
 
-        while(r >= 0)
-        {
-        for(var i = 0; i<=360;i++)
-        {
-            var radian = i * (3.141/180);
-            x = r * Math.cos(radian);
-            y = r * Math.sin(radian);
-            verticesData.push(x + x_center);
-            verticesData.push(y + y_center);
-        }
-        r--;
+        while (r >= 0) {
+            for (var i = 0; i <= 360; i++) {
+                var radian = i * (3.141 / 180);
+                x = r * Math.cos(radian);
+                y = r * Math.sin(radian);
+                verticesData.push(x + x_center);
+                verticesData.push(y + y_center);
+            }
+            r--;
         }
 
-        
-        for (var i = 0; i < verticesData.length; i++) 
-        {
-            console.log("(",verticesData[i],",",verticesData[i+1],")");
+
+        for (var i = 0; i < verticesData.length; i++) {
+            console.log("(", verticesData[i], ",", verticesData[i + 1], ")");
             i++;
         }
 

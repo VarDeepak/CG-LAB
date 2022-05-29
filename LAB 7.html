@@ -16,19 +16,16 @@
 
         verticesData.push(window.prompt("Enter x coordinate: "));
         verticesData.push(window.prompt("Enter y coordinate: "));
-        
+
         var thetha = window.prompt("Enter rotation angle: ");
 
         var final_point = rotation(verticesData, thetha);
 
         console.log("Point before rotation: (" + verticesData[0] + " , " + verticesData[1] + ")");
 
-            alert("( " + final_point[0] + " , " + final_point[1] + ")");
-        // console.log("Point after rotation: (" + final_point[0] + " , " + final_point[1] + ")");
+        alert("( " + final_point[0] + " , " + final_point[1] + ")");
 
         draw(final_point); // This method draws all the points provided in the argument array.
-
-        //////////////////////////////// YOUR CODE SHOULD END BEFORE THIS LINE //////////////////////
 
         function rotation(p, theta) {
             var radian = thetha * (3.141 / 180);
@@ -55,6 +52,12 @@
             return new_array;
 
         }
+
+        //////////////////////////////// YOUR CODE SHOULD END BEFORE THIS LINE //////////////////////
+
+
+
+
 
         function XY_mapping() {
             let inputVertices = arguments[0];

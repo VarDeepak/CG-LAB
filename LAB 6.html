@@ -16,7 +16,6 @@
                             4,5,
                             6,3];		// The array holds the x,y of all the data points to be drawn on the screen.
 
-
         //converting the point in homogenous system 
         var point1 = [];
         point1.push(verticesData[0]);
@@ -33,26 +32,10 @@
         point3.push(verticesData[5]);
         point3.push(1);
 
-
-        
-
-
         // Over all scaling 
         var S = 3;      
 
-
-
-
-
-
-
-
-
-        
-
-
-
-//overall scaling
+        //overall scaling
         var R1 = [];    //return matrix 
         R1 = over_all_scaling(S);
         var final_point1 = [];   //final point matrix 
@@ -79,20 +62,13 @@
         final_points.push(final_point3[0]);
         final_points.push(final_point3[1]);
 
-
-
-
         draw(final_points); // This method draws all the points provided in the argument array.
-
-        //////////////////////////////// YOUR CODE SHOULD END BEFORE THIS LINE //////////////////////
 
         function over_all_scaling(S) {
             return [S, 0, 0,
                 0, S, 0,
                 0, 0, 1];
         }
-
-        
 
         function matrix_multiplication(p, m) {
             var new_array = [];
@@ -104,6 +80,14 @@
             return new_array;
 
         }
+
+        //////////////////////////////// YOUR CODE SHOULD END BEFORE THIS LINE //////////////////////
+
+        
+
+        
+
+        
 
         function XY_mapping() {
             let inputVertices = arguments[0];

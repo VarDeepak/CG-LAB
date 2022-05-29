@@ -13,7 +13,7 @@
         //////////////////////////////// YOUR CODE SHOULD START AFTER THIS LINE //////////////////////
         var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
         var verticesData = [];		// The array holds the x,y of all the data points to be drawn on the screen.
-        var a = 10, b = 5;
+        var a = 8, b = 7;    // a -> major axis     b-> minor axis
         var x = a, y = 0;   //initial points for region 1 
         var x_center = 50, y_center = 50;   //center of ellipse 
         var dy, dx;    //of next point
@@ -30,38 +30,38 @@
             dx = a * a * (y + 1);
 
         }
-            while(dy >= dx) {
+        while (dy > dx) {
 
-                verticesData.push(x + x_center);
-                verticesData.push(y + y_center);
+            verticesData.push(x + x_center);
+            verticesData.push(y + y_center);
 
-                verticesData.push(-x + x_center);
-                verticesData.push(y + y_center);
+            verticesData.push(-x + x_center);
+            verticesData.push(y + y_center);
 
-                verticesData.push(-x + x_center);
-                verticesData.push(-y + y_center);
+            verticesData.push(-x + x_center);
+            verticesData.push(-y + y_center);
 
-                verticesData.push(x + x_center);
-                verticesData.push(-y + y_center);
+            verticesData.push(x + x_center);
+            verticesData.push(-y + y_center);
 
-                if (p_initial_region1 < 0) {
-                    p_initial_region1 = p_initial_region1 + ((a * a) * (2 * y + 3));
-                    dy = b * b * x;
-                    dx = a * a * (y + 1);
-                    y++;
-                } else {
-                    p_initial_region1 = p_initial_region1 - ((b*b) * (2*x + 2))  + ((a * a) * (2 * y + 3));
-                    dy = b * b * (x - 1);
-                    dx = a * a * (y + 1);
-                    x--;
-                    y++;
-                }
-
+            if (p_initial_region1 < 0) {
+                p_initial_region1 = p_initial_region1 + ((a * a) * (2 * y + 3));
+                dy = b * b * x;
+                dx = a * a * (y + 1);
+                y++;
+            } else {
+                p_initial_region1 = p_initial_region1 - ((b * b) * (2 * x + 2)) + ((a * a) * (2 * y + 3));
+                dy = b * b * (x - 1);
+                dx = a * a * (y + 1);
+                x--;
+                y++;
             }
+
+        }
 
         p_initial_region2 = ((b * b) * (x - 1) * (x - 1)) + ((a * a) * (y + (1 / 2)) * (y + (1 / 2))) - (a * a) * (b * b);
 
-        for (var x;x >= 0; x--) {
+        for (var x; x >= 0; x--) {
 
             verticesData.push(x + x_center);
             verticesData.push(y + y_center);
@@ -76,7 +76,7 @@
             verticesData.push(-y + y_center);
 
             if (p_initial_region2 < 0) {
-                p_initial_region2 = p_initial_region2 - ((b * b) * (2 * x) + 3) + ((a * a) * ((2*y)+2));
+                p_initial_region2 = p_initial_region2 - ((b * b) * (2 * x) + 3) + ((a * a) * ((2 * y) + 2));
                 y++;
             } else {
                 p_initial_region2 = p_initial_region2 - ((b * b) * (2 * x) + 3);

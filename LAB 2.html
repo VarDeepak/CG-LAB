@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <canvas id="canvas" width="1200" height="600">
+    <canvas id="canvas" width="1200" height="1200">
         Your browser does not support HTML5
     </canvas>
     <br />
@@ -13,7 +13,7 @@
         //////////////////////////////// YOUR CODE SHOULD START AFTER THIS LINE //////////////////////
         var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
         var verticesData = [];		// The array holds the x,y of all the data points to be drawn on the screen.
-        var x1 =2, y1 = 2, x2 = 9, y2 =11;
+        var x1 = 8, y1 = x1 + 10, x2 = x1+5, y2 = y1+8;   // R2142201878
         var x = x1, y = y1;
 
         delta_x = x2 - x1;
@@ -29,19 +29,17 @@
         var x_increment = delta_x / total_steps;
         var y_increment = delta_y / total_steps;
 
-        for (var i = 1; i <= total_steps; i++)
-         {
-        
+        for (var i = 1; i <= total_steps; i++) {
+
             verticesData.push(Math.floor(x));
             verticesData.push(Math.floor(y));
-            x = x + x_increment;    
+            x = x + x_increment;
             y = y + y_increment;
 
         }
 
-        for (var i = 0; i < verticesData.length; i++) 
-        {
-            console.log("(",verticesData[i],",",verticesData[i+1],")");
+        for (var i = 0; i < verticesData.length; i++) {
+            console.log("(", verticesData[i], ",", verticesData[i + 1], ")");
             i++;
         }
 
@@ -108,9 +106,7 @@
         function initializeWebGL(gl) {
             var canvas = document.getElementById('canvas');
 
-            canvas.width = window.innerWidth;;
-            canvas.height = window.innerHeight;;
-
+            
             gl = canvas.getContext('webgl');
 
             if (!gl) {

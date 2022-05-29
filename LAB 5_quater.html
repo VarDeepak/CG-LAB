@@ -17,10 +17,9 @@
         var r = 8;
         var x = r, y = 0;
 
-        var p = (5/4) - r;
+        var p = (5 / 4) - r;
 
-        for(y;y <= r;y++)
-        {
+        for (y; y <= r; y++) {
 
             verticesData.push(x + x_center);
             verticesData.push(y + y_center);
@@ -37,15 +36,14 @@
             if (p < 0) {
                 p = p + (2 * y) + 3;
             } else {
-                p = p - 2*x + 2*y + 5;
+                p = p - 2 * x + 2 * y + 5;
                 x--;
             }
 
 
         }
 
-        for(x;x>=0;x--)
-        {
+        for (x; x >= 0; x--) {
             verticesData.push(x + x_center);
             verticesData.push(y + y_center);
 
@@ -64,8 +62,6 @@
             console.log("(", verticesData[i], ",", verticesData[i + 1], ")");
             i++;
         }
-
-
 
 
         draw(verticesData);// This method draws all the points provided in the argument array.

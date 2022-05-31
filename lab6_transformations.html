@@ -14,11 +14,9 @@
         var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
 
         //////////////////////////////// Transpose Matrix of input matrix //////////////////////
-        var arr = [
-            [2, 3, 8],
-            [9, 1, 5],
-            [4, 9, 0],
-        ];
+        var arr = [[2, 3, 8],
+                   [9, 1, 5],
+                   [4, 9, 0]];
 
         function transpose(arr) {
             for (let i = 0; i < arr.length; i++) {
@@ -47,8 +45,8 @@
         console.log("Translation Matrix with m = " + m + " and n = " + n + ": ");
         console.log(translation(m, n));
         //////////////////////////////// Scaling Matrix by Sx, Sy //////////////////////
-        var Sx = 3;
-        var Sy = 4;
+        var Sx = 7;
+        var Sy = 10;
 
         function scaling(Sx, Sy) {
 
@@ -99,11 +97,9 @@
         console.log("Rotation Matrix about angle (" + thetha + ") thetha degree " );
         console.log(rotation(thetha));
         //////////////////////////////// Diagonal matrix of input matrix //////////////////////
-        var arr = [
-            2, 3, 8,
-            9, 1, 5,
-            4, 9, 10,
-        ];
+        var arr = [2, 3, 8,
+                   9, 1, 5,
+                   4, 9, 10];
         
         function Diagonal(arr) {
             return [arr[0],arr[4],arr[8]]
@@ -114,7 +110,7 @@
         //////////////////////////////// Overall Scaling matrix by S //////////////////////
         var S = 5;
 
-        function scaling(S) {
+        function Overall_scaling(S) {
 
             var array = [[S, 0, 0],
                          [0, S, 0],
@@ -124,13 +120,11 @@
         }
 
         console.log("OverAll Scaling Matrix with S = " + S + ": ");
-        console.log(scaling(S));
+        console.log(Overall_scaling(S));
         //////////////////////////////// Determinant matrix of input matrix //////////////////////
-        var arr = [
-            [2, 3, 8],
-            [9, 1, 5],
-            [4, 9, 0],
-        ];
+        var arr = [[2, 3, 8],
+                   [9, 1, 5],
+                   [4, 9, 0]];
         
         function determinant(arr){
         x = (arr[1][1] * arr[2][2]) - (arr[2][1] * arr[1][2]);

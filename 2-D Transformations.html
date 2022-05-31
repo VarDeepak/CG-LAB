@@ -12,31 +12,9 @@
     <script>
         //////////////////////////////// YOUR CODE SHOULD START AFTER THIS LINE //////////////////////
         var SCREEN_SIZE = 100;		// The size of the coordinate axis, X, Y = [0 SCREEN_SIZE]
-
-
-        /////////////////////////////// Transpose of a Matrix /////////////////////////////
-        var arr = [
-            [2, 3, 8],
-            [9, 1, 5],
-            [4, 9, 0],
-        ];
-
-        function transpose(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < i; j++) {
-                    const tmp = arr[i][j];
-                    arr[i][j] = arr[j][i];
-                    arr[j][i] = tmp;
-                };
-            }
-        }
-
-        transpose(arr);
-        console.log("Transposed Matrix:");
-        console.log(arr);
-        ///////////////////////////////////////////////////////////////////////////////////////
+       
         /////////////////////////////// Translation Matrix /////////////////////////////
-        var point = [2,3,1];
+         var point = [2,3,1];
         var m = 7;
         var n = 8;
         var translation_terms = [];
@@ -70,8 +48,8 @@
             0, 0, 1];
         }
         ///////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////// Reflection Matrix about X-axis /////////////////////////////
-        var point = [2,3,1];
+         /////////////////////////////// Reflection Matrix about X-axis /////////////////////////////
+         var point = [2,3,1];
         var R3 = [];
         R3 = reflection_x();
         final_point = matrix_multiplication(point, R3);
@@ -84,8 +62,8 @@
             0, 0, 1];
         }
         ///////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////// Reflection Matrix about y-axis /////////////////////////////
-        var point = [2,3,1];
+         /////////////////////////////// Reflection Matrix about y-axis /////////////////////////////
+         var point = [2,3,1];
         var R4 = [];
         R4 = reflection_y();
         final_point = matrix_multiplication(point, R4);
@@ -98,8 +76,8 @@
             0, 0, 1];
         }
         ///////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////// Rotation Matrix by angle theta degree /////////////////////////////
-        var point = [2,3,1];
+         /////////////////////////////// Rotation Matrix by angle theta degree /////////////////////////////
+         var point = [2,3,1];
         var thetha = 90;
         var R5 = [];
         R5 = rotation(thetha);
@@ -131,41 +109,6 @@
         
         console.log("Diagonal Matrix:");
         console.log(Diagonal(arr));
-        ///////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////// Overall Scaling Matrix /////////////////////////////
-        var point = [2,3,1];
-        var S = 3;  
-        var R1 = [];    //return matrix 
-        R1 = over_all_scaling(S);
-        var final_point = [];   //final point matrix 
-        final_point = matrix_multiplication(point, R1);
-        console.log("Point before overall scaling-> " + point[0] + "," + point[1]);
-        console.log("S = " + S);
-        console.log("Point after overall scaling-> " + final_point[0] + "," + final_point[1]);
-        
-        function over_all_scaling(S) {
-            return [S, 0, 0,
-            0, S, 0,
-            0, 0, 1];
-        }
-        ///////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////// Determinant of a Matrix /////////////////////////////
-        var arr = [
-            [2, 3, 8],
-            [9, 1, 5],
-            [4, 9, 0],
-        ];
-        
-        function determinant(arr){
-        x = (arr[1][1] * arr[2][2]) - (arr[2][1] * arr[1][2]);
-		y = (arr[1][0] * arr[2][2]) - (arr[2][0] * arr[1][2]);
-		z = (arr[1][0] * arr[2][1]) - (arr[2][0] * arr[1][1]);
-		
-		determinant = (arr[0][0] * x)- (arr[0][1] * y) + (arr[0][2] * z);
-        return determinant;
-        }
-        
-        console.log("Determinant of the Matrix: " + determinant(arr));
         ///////////////////////////////////////////////////////////////////////////////////////
         function matrix_multiplication(p, m) {
             var new_array = [];
